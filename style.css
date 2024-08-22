@@ -1,0 +1,319 @@
+body {
+    height: 1000px;
+    background-color: #beb1e1;
+    }
+
+.top-container {
+    position: relative;
+    text-align: center;
+    }
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    }
+
+/*main div */
+.main-div {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    position: fixed;
+    inset: 0px;
+    width: 50rem;
+    height: 30rem;
+    max-width: 100vw;
+    max-height: 100dvh;
+    margin: auto;
+    background-color: #dfdaee;
+    border-radius: 25px;    
+    box-shadow: 10px 10px 12px 5px rgb(116, 80, 182);
+    }
+
+/* divs inside the main div */
+#inmain-div1 {
+    place-items: center;
+    text-align: center;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadeout;
+    animation-delay: 13s;
+    }
+
+#inmain-div2 {
+    text-align: center;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: fadein;
+    animation-delay: 15s;
+
+  }
+
+#inmain-div3 {
+    display: none;
+    text-align: center;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+
+}
+
+/* for the letter and envelope and popup */
+#letter-div {
+  height: 40%;
+  display: none;
+  justify-content: center;
+  text-align: center;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+
+}
+
+#envelopeBtn {
+  width: 300px;
+  height: 450px;
+  border: none;
+  background-image: url('images/envelope-closed.png');
+  background-size: contain;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  color: transparent;
+  cursor: pointer;
+}
+
+#envelopeBtn:hover {
+background-image: url('images/envelope-opened.png');
+transform: translateY(-100px);
+}
+
+#envelopeBtn:active {
+  background-image: url('images/envelope-clicked.png');
+  transform: translateY(-130px);
+}
+
+.popup-box {
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  width: 50%;
+  height: 50%;
+  /* background-image: url('images/youness.PNG');
+  background-size: contain;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  */
+  background-color: rgb(220, 245, 253);
+  display: grid;
+  place-items: center;
+  text-align: center;
+  z-index: 9999;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  background-color: rgb(213, 198, 255);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.popup-button {
+  background-color: transparent;
+  cursor: pointer;
+
+}
+
+/*TEXT ANIMATIONS*/
+.fadein-txt p {
+  font-family: niconne;
+  color:rgb(116, 80, 182);
+  font-size: 48px;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+#txt-happy {
+  animation-name: fadein;
+  animation-delay: 1s;
+}
+
+#txt-birthday {
+  animation-name: fadein;
+  animation-delay: 2.5s;
+}
+
+#txt-mybeloved {
+  animation-name: fadein;
+  animation-delay: 4s;
+}
+
+#txt-makesure {
+  animation-name: fadein;
+  animation-delay: 17s;
+}
+#txt-name {
+  animation-name: fadein;
+  animation-delay: 19s;
+}
+
+.txtbox {
+  place-items: center;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  height: 100%;
+  max-height: fit-content;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#txtboxName {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadein;
+  animation-delay: 21s;
+}
+
+.txtbox input {
+  border-radius: 7px;
+  border: none;
+  box-shadow: 2px 2px 2px 1px rgb(116, 80, 182);
+  font-family: Delius;;
+  font-size:14pt;
+  color: white;
+  background: linear-gradient(
+    to right, 
+    #B294FF, 
+    #72a7ec, 
+    #af8eec, 
+    #86a6ec, 
+    #B294FF, 
+    #69b3f0);
+  background-size: 500% auto;
+  animation: gradient 3s linear infinite;
+}
+
+
+
+
+
+/*.txtbox button { 
+  background-image: url(arrow-forward.svg);
+  background-repeat: no-repeat;  
+  height: 50px;
+  width: 200px;
+  top: 0;
+  right: 0;
+  padding: 0; 
+  vertical-align: middle;
+  transition: color .25s;
+  &:hover {
+  color: white;
+  }
+}
+*/
+
+/* gradient animation */  
+@keyframes gradient { 
+    0%{background-position:0 0}
+    100%{background-position:100% 0}
+  }
+
+/*fadein and fadeout animations*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+/*FOR SCROLL TEXT AND GRADIENT TEXT ANIMATIONS*/
+    #scroll-container {
+        overflow: hidden;
+
+      }
+      
+      #scroll-text {
+        text-align: right;
+        font-family: Delius;
+        /* gradient color*/
+        background: linear-gradient(
+        to right,
+        #47354b,
+        #9175cb,
+        #d290cb,
+        #90aad2,
+        #986395,
+        #6b5897,
+        #9bb262,
+        #19131b,
+        #2d201a,
+        #777b43
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 50% auto;
+    animation: textShine 1s ease-in-out infinite alternate;
+  
+      
+        /* animation properties */
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+        
+        -moz-animation: my-animation 15s linear infinite;
+        -webkit-animation: my-animation 15s linear infinite;
+        animation: my-animation 15s linear infinite;
+        animation-delay: 5.5s;
+      
+      }
+      
+      @-webkit-keyframes my-animation {
+        from { -webkit-transform: translateX(-100%); }
+        to { -webkit-transform: translateX(100%); }
+      }
+      
+      @keyframes my-animation {
+        from {
+          -moz-transform: translateX(-100%);
+          -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+        }
+        to {
+          -moz-transform: translateX(100%);
+          -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+        }
+      }
+      @keyframes textShine {
+        0% {
+            background-position: 0% 50%;
+        }
+        100% {
+            background-position: 100% 50%;
+        }
+      }
+
+
